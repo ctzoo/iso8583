@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE isopackager PUBLIC
+        "-//jPOS/jPOS Generic Packager DTD 1.0//EN"
+        "http://jpos.org/dtd/generic-packager-1.0.dtd">
+
+<!-- ISO 8583:1987 Bank Card Originated Messages —Interchange Message Specifications — Content For Finalcial Transactions》-->
+<!-- 使用崔哥写的扩展的类 -->
+<isopackager>
+  <isofield
+      id="0"
+      length="4"
+      name="Message Type ID"
+      class="org.jpos.iso.IFB_NUMERIC" />
+  <isofield
+      id="1"
+      length="8"
+      name="BIT MAP"
+      class="org.jpos.iso.IFB_BITMAP"/>  
+  <isofield
+      id="2"
+      length="19"
+      name="Primary Account Number"
+      pad="false"
+      class="org.jpos.iso.IFB_LLNUM"/>
+  <isofield
+      id="3"
+      length="6"
+      name="Processing Code"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="4"
+      length="12"
+      name="Amount, Transaction"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="11"
+      length="6"
+      name="System Trace Audit Number"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="12"
+      length="6"
+      name="Time, Local Transaction"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="13"
+      length="4"
+      name="Date, Local Transaction"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="14"
+      length="4"
+      name="Date, Expiration"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="15"
+      length="4"
+      name="Date, Settlement"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="22"
+      length="3"
+      name="Point Of Service Entry Mode Code"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="23"
+      length="3"
+      name="Card Sequence Number"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="25"
+      length="2"
+      name="Point Of Service Condition Code"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="26"
+      length="2"
+      name="Point Of Service PIN Capture Code"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="32"
+      length="11"
+      name="Acquiring Institution Identification Code"
+      pad="false"
+      class="org.jpos.iso.IFB_LLNUM"/>
+  <isofield
+      id="35"
+      length="37"
+      name="Track 2 data"
+      pad="false"
+      class="org.jpos.iso.IFB_LLNUM"/>
+  <isofield
+      id="36"
+      length="104"
+      name="Track 3 Data"
+      pad="false"
+      class="org.jpos.iso.IFB_LLLNUM"/>
+  <isofield
+      id="37"
+      length="12"
+      name="Retrieval Reference Number"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="38"
+      length="6"
+      name="Authorization Identification Response"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="39"
+      length="2"
+      name="Response Code"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="41"
+      length="8"
+      name="Card Acceptor Terminal Identification"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="42"
+      length="15"
+      name="Card Acceptor Identification Code"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="44"
+      length="25"
+      name="Additional Response Data"
+      class="com.yada.jpos.extend.IFB_GBK_LLCHAR"/>
+  <isofield
+      id="48"
+      length="512"
+      name="ADITIONAL DATA - PRIVATE"
+      class="org.jpos.iso.IFB_LLLNUM"/>
+  <isofield
+      id="49"
+      length="3"
+      name="Currency Code, Transaction"
+      pad="true"
+      class="com.yada.jpos.extend.IF_GBK_CHAR"/>
+  <isofield
+      id="52"
+      length="8"
+      name="Pin Data"
+      class="org.jpos.iso.IFB_BINARY"/>
+  <isofield
+      id="53"
+      length="16"
+      name="Security Related Control Information"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="54"
+      length="20"
+      name="Additional Amounts"
+      class="com.yada.jpos.extend.IFB_GBK_LLLCHAR"/>
+  <isofield
+      id="55"
+      length="255"
+      name="Integrated Circuit Card（ICC）System Related Data"
+      class="org.jpos.iso.IFB_LLLBINARY"/>
+  <isofield
+      id="58"
+      length="100"
+      name="IC(PBOC) Data Reserved"
+      class="com.yada.jpos.extend.IFA_GBK_LLLCHAR"/>   
+  <isofield
+      id="60"
+      length="17"
+      name="Reserved"
+      class="org.jpos.iso.IFB_LLLNUM"/>
+  <isofield
+      id="61"
+      length="29"
+      name="Cardholder Authentication Information"
+      class="org.jpos.iso.IFB_LLLNUM"/>
+  <isofield
+      id="62"
+      length="512"
+      name="Switching Data"
+      class="org.jpos.iso.IFB_LLLBINARY"/>
+  <isofield
+      id="63"
+      length="163"
+      name="Finacial Network Data"
+      class="com.yada.jpos.extend.IFB_GBK_LLLCHAR"/>
+  <isofield
+      id="64"
+      length="8"
+      name="Message Authentication Code"
+      class="org.jpos.iso.IFB_BINARY"/>
+</isopackager>

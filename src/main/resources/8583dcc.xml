@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE isopackager PUBLIC
+        "-//jPOS/jPOS Generic Packager DTD 1.0//EN"
+        "http://jpos.org/dtd/generic-packager-1.0.dtd">
+
+<isopackager>
+  <isofield
+      id="0"
+      length="4"
+      name="Message Type ID"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC" />
+  <isofield
+      id="1"
+      length="8"
+      name="BIT MAP"
+      class="org.jpos.iso.IFB_BITMAP"/>
+  <isofield
+      id="2"
+      length="19"
+      name="Primary Account Number"
+      pad="false"
+      class="org.jpos.iso.IFB_LLNUM"/>
+  <isofield
+      id="3"
+      length="6"
+      name="Processing Code"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="4"
+      length="12"
+      name="Amount, Tran"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="5"
+      length="12"
+      name="Amount, Settlement"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="9"
+      length="8"
+      name="Conversion Rate,Settlement"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="11"
+      length="6"
+      name="Systems Trace code"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="12"
+      length="6"
+      name="TIME, LOCAL TRANSACTION"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="13"
+      length="4"
+      name="DATE, LOCAL TRANSACTION"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="14"
+      length="4"
+      name="DATE, EXPIRATION"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="22"
+      length="3"
+      name="POS Entry Mode"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="24"
+      length="3"
+      name="NETWORK INTERNATIONAL IDENTIFIEER"
+      pad="true"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="25"
+      length="2"
+      name="POS CONDITION CODE"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="35"
+      length="37"
+      name="TRACK 2 DATA"
+      pad="false"
+      class="org.jpos.iso.IFB_LLNUM"/>
+  <isofield
+      id="37"
+      length="12"
+      name="REFERENCE NUMBER"
+      pad="false"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="38"
+      length="6"
+      name="AUTHORIZATION ID RESPONSE"
+      pad="false"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="39"
+      length="2"
+      name="RESPONSE CODE"
+      pad="false"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="41"
+      length="8"
+      name="CARD ACCEPTOR TERMINAL ID"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="42"
+      length="15"
+      name="CARD ACCEPTOR ID CODE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="49"
+      length="3"
+      name="CURRENCY CODE, TRANSACTION"
+      pad="true"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="54"
+      length="12"
+      name="ADDITIONAL AMOUNTS"
+      class="org.jpos.iso.IFB_NUMERIC"/>
+  <isofield
+      id="55"
+      length="255"
+      name="IC CARD TRANSACTION DATA"
+      class="org.jpos.iso.IFB_LLLBINARY"/>
+  <isofield
+      id="56"
+      length="999"
+      name="RESERVED ISO"
+      class="org.jpos.iso.IFB_LLLBINARY"/>
+  
+  <isofield
+      id="60"
+      length="6"
+      name="RESERVED PRIVATE"
+      class="org.jpos.iso.IFA_LLLCHAR"/>
+  <isofield
+      id="61"
+      length="999"
+      name="RESERVED ISO"
+      class="org.jpos.iso.IFB_LLLCHAR"/>
+  <isofield
+      id="62"
+      length="6"
+      name="RESERVED PRIVATE"
+      class="org.jpos.iso.IFB_LLLCHAR"/>
+  <isofield
+      id="63"
+      length="999"
+      name="RESERVED PRIVATE"
+      class="org.jpos.iso.IFA_LLLCHAR"/>
+</isopackager>

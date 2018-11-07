@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd ">
+	<context:component-scan base-package="com.yada" />
+	<bean id="cupsPackager" class="com.yada.jpos.extend.ResourceStreamPackager">
+		<constructor-arg value="/8583cups.xml" />
+	</bean>
+	<bean id="dccPackager" class="com.yada.jpos.extend.ResourceStreamPackager">
+		<constructor-arg value="/8583dcc.xml" />
+	</bean>
+	<bean id="hhapPackager" class="com.yada.jpos.extend.ResourceStreamPackager">
+		<constructor-arg value="/8583hhap.xml" />
+	</bean>
+	<bean id="pospPackager" class="com.yada.jpos.extend.ResourceStreamPackager">
+		<constructor-arg value="/8583posp.xml" />
+	</bean>
+	<bean id="zpPackager" class="com.yada.jpos.extend.ResourceStreamPackager">
+		<constructor-arg value="/8583zp.xml" />
+	</bean>
+	<util:map id="packagerMap">
+		<entry key="cups/v1" value-ref="cupsPackager"></entry>
+		<entry key="dcc/v1" value-ref="cupsPackager"></entry>
+		<entry key="hhap/v1" value-ref="cupsPackager"></entry>
+		<entry key="posp/v1" value-ref="cupsPackager"></entry>
+		<entry key="zp/v1" value-ref="cupsPackager"></entry>
+	</util:map>
+	<bean id="test" class="java.lang.String">
+		<constructor-arg value="test" />
+	</bean>
+</beans>
