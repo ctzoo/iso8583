@@ -28,7 +28,6 @@ public class PackagerController {
 		var packer = map.get(packerName + "/" + version);
 		var msg = new ISOMsg();
 		msg.setPackager(packer);
-		msg.setMTI("0200");
 
 		for (var key : fieldMap.keySet()) {
 			if (key == "MTI") {
